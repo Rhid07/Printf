@@ -34,7 +34,8 @@ Group Projects concept page (*Must read  above concept for better understanding*
  There should be one project repository per group. The other members do not fork or clone the project to ensure only one of the team has the repository in th    eir github account otherwise you risk scoring 0%.
 
 * More InfoREADME.md
-# Project description -Peace-07-0x11.c-Printf functions
+
+# Project description -coolstanHackwares and Rallien-07-0x11.c-Printf functions
 
 * Resources
   
