@@ -1,6 +1,6 @@
 ## README.md
 
-# Project description -CoolstanHackware and Rallientech-0x11.c-Printf functions
+# _Project description -CoolstanHackware and Rallientech-0x11.c-Printf functions_ #
 
 
 # Resources
@@ -11,7 +11,7 @@
 
 * man printf
 
-# General Requirements#
+# General Requirements #
 
 * Allowed editors: vi, vim, emacs
 
