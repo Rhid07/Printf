@@ -1,4 +1,4 @@
-# _Project description -CoolstanHackware and Rallientech-0x11.c-Printf functions_ #
+# _Project description -CoolstanHackwares and Rallientech-0x11.c-Printf functions_ #
 
 
 # Resources
