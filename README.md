@@ -1,5 +1,3 @@
-## README.md
-
 # _Project description -CoolstanHackware and Rallientech-0x11.c-Printf functions_ #
 
 
