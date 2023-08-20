@@ -1,6 +1,6 @@
-## README.md##
+## README.md
 
-#_Project description -CoolstanHackware and Rallientech-0x11.c-Printf functions
+# Project description -CoolstanHackware and Rallientech-0x11.c-Printf functions
 
 
 # Resources
@@ -11,7 +11,7 @@
 
 * man printf
 
-#General Requirements#
+# General Requirements#
 
 * Allowed editors: vi, vim, emacs
 
@@ -36,11 +36,11 @@
 
 * Note that we will not provide the _putchar function for this project.
 
-# _GitHub_#
+# _GitHub_ #
 
 * There should be one project repository per group. The other members do not fork or clone the project to ensure only one of the team has the repository in th    eir github account otherwise you risk scoring 0%.
 
-##More Info##
+## More Info ##
 
 * Authorized functions and macros
 * write (man 2 write)
