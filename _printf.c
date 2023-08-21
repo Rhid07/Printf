@@ -1,53 +1,50 @@
-#include "main.h"
-#include <stdarg.h>
-#include <unistd.h>
+#include"main.h"
 
 /**
- * _printf - A custom printf function
- * @format: The format string
- * @...: Variable arguments
+ * _printf - printf character to stdout
+ * @format: character to be printed
+ * @...: variables argument
  *
- * Return: The number of characters printed
- * excluding the null byte used to end output to strings
- * This code conforms to the betty documentation style
- **/
-
+ *Return: the number of character
+**/
 int _printf(const char *format, ...)
 {
-	va_list args;
-	int count = 0;
-
-	va_start(args, format);
-
-	while (*format)
-{
-	if (*format != '%')
-{
-	write(1, format, 1);
-	count++;
-}
-	else
-{
-	format++;
-	if (*format == 'c')
-{
-	char c = va_arg(args, int);
-
-	count += write(1, &c, 1);
-}
-	else if (*format == 's')
-{
-	char *str = va_arg(args, char *);
-
-	while (*str)
-	count += write(1, str++, 1);
-}
-	else if (*format == '%')
-	count += write(1, "%", 1);
-}
-	format++;
-}
-
-	va_end(args);
-	return (count);
-}
+    int char_printer = 0;
+    va_list arg_lists;
+    va_start(arg_lists, format);
+    
+    while(*format)
+    {
+        format ++;
+        
+        if(*format != '%')
+        {
+        _write(1,format,1);
+        char_printer++;
+        }
+        if(*format == '\0')
+        break;
+        if (*format == '%')
+        {
+        _write(1,format,1);
+        char_printer++;
+        }
+        else if(*format == 'c')
+        {
+        char c = va_arg(arg_lists, int);
+        _write(1,&c,1);
+        char_printer++;
+        }
+        else if(*format == 's')
+        {
+            char str = va_arg(arg_lists,char);
+            
+            int str_len = 0;
+            while (str[str_len] !='\0')
+            str_len ++;
+            
+            _write(1,str,str_len);
+            char_printer++;
+        }
+    }
+    va_end(arg_lists);
