@@ -15,6 +15,7 @@ int _print_specifier(const char *format, va_list arg_list)
 	int char_count = 0;
 	char c, *str;
 	int num;
+	unsigned int num1;
 
 	switch (*format)
 {
@@ -29,11 +30,17 @@ int _print_specifier(const char *format, va_list arg_list)
 	case 'i':
 	char_count += print_int((num = va_arg(arg_list, int)));
 	break;
+	case 'b':
+{
+	num1 = va_arg(arg_list, unsigned int);
+	char_count += _print_binary(num1);
+	break;
+}
 	case '%':
 	char_count += _write_character('%');
 	break;
 	default:
-	char_count += (_write_character('%'), _write_character(*format));
+	char_count += (_write_character('%'),_write_character(*format));
 }
 
 	return (char_count);
