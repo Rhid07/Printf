@@ -1,14 +1,13 @@
 #include <unistd.h>
+
 /**
- * _write_character - Helper function to write a single character to stdout
+ * _write_character - Write a character to standard output
  * @c: The character to write
  *
- * Return: Number of characters written (always 1)
- * This code conforms to the betty documentation style
+ * Return: Number of characters written (1 for success, -1 for error)
  **/
 
 int _write_character(char c)
 {
-	write(1, &c, 1);
-	return (1);
+	return (write(1, &c, 1));
 }
