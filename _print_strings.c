@@ -8,15 +8,15 @@
  **/
 int _print_string(const char *str)
 {
-	int count = 0;
+	int counter = 0;
 
 	while (*str)
 	{
 		_write_character(*str);
-		count++;
+		counter++;
 		str++;
 	}
 
-	return (count);
+	return (counter);
 }
 

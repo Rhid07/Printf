@@ -9,12 +9,12 @@
 
 int _print(const char *str)
 {
-	int count = 0;
+	int counter = 0;
 
 	while (*str)
 	{
-		count += _write_character(*str);
+		counter += _write_character(*str);
 		str++;
 	}
-	return (count);
+	return (counter);
 }
