@@ -5,38 +5,50 @@
  * @...: Variable arguments
  *
  * Return: Number of characters printed
- * This code conforms to the Betty documentation style
+ * This code conforms to the betty documentation style
  **/
-
 int _printf(const char *format, ...)
 {
-	va_list args;
-	int count = 0;
-	const char *curr = format;
+	va_list arg_list;
+	int char_count = 0;
 
-	va_start(args, format);
+	va_start(arg_list, format);
 
-	while (*curr)
+	while (*format)
 	{
-		if (*curr == '%')
+		if (*format != '%')
 		{
-			process_format(args, &count, &curr);
+			char_count += _write_character(*format);
 		}
 		else
 		{
-			_write_character(*curr);
-			count++;
-			curr++;
+			format++;
+			if (*format == 'c')
+			{
+				char c = va_arg(arg_list, int);
+
+				char_count += _write_character(c);
+			}
+			else if (*format == 's')
+			{
+				char *str = va_arg(arg_list, char *);
+
+				char_count += _print_string(str);
+			}
+			else if (*format == '%')
+			{
+				char_count += _write_character('%');
+			}
+			else
+			{
+				char_count += _write_character('%');
+				char_count += _write_character(*format);
+			}
 		}
+
+		format++;
 	}
 
-	va_end(args);
-	return (count);
+	va_end(arg_list);
+	return (char_count);
 }
-
-
-
-
-
-
-

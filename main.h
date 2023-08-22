@@ -1,18 +1,16 @@
-#ifndef MAIN_H
-#define MAIN_H
+#ifndef PRINTF_H
+#define PRINTF_H
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
 #include <string.h>
 #include <stdarg.h>
-#include <limits.h>
+#include <unistd.h>
 
-int _write_character(char c);
-void handle_char(va_list args, int *count, const char **curr);
-void handle_string(va_list args, int *count, const char **curr);
-void handle_percent(int *count, const char **curr);
-void process_format(va_list args, int *count, const char **curr);
+int _print(const char *str);
+int _print_string(const char *str);
 int _printf(const char *format, ...);
-
+int _write_character(char c);
+int _print_specifier(const char *format, ...);
 #endif
