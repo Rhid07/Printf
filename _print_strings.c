@@ -6,16 +6,16 @@
  * Return: Number of characters written
  * This code conforms to the betty documentation style
  **/
+
 int _print_string(const char *str)
 {
 	int counter = 0;
 
 	while (*str)
-	{
-		_write_character(*str);
-		counter++;
-		str++;
-	}
+{
+	counter += _write_character(*str);
+	str++;
+}
 
 	return (counter);
 }
