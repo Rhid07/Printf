@@ -16,5 +16,6 @@ int _write_character(char c);
 int print_char(char c);
 int print_string(const char *str);
 int print_int(int num);
+int _print_specifier(const char *format, ...);
 
 #endif
