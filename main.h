@@ -3,15 +3,13 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <limit.h>
 #include <unistd.h>
 #include <string.h>
 #include <stdarg.h>
 #include <unistd.h>
 
+int _print(const char *str);
+int _print_string(const char *str);
 int _printf(const char *format, ...);
-int _write(const char *str, int len);
-int _print_char(va_list arg_lists, int char_printer);
-int _print_string(va_list arg_lists, int char_printer);
-
+int _write_character(char c);
 #endif

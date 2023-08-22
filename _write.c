@@ -1,15 +1,14 @@
 #include <unistd.h>
-
 /**
- * _write - A custom write function
- * @str: The string to write
- * @len: The length of the string
+ * _write_character - Helper function to write a single character to stdout
+ * @c: The character to write
  *
- * Return: The number of characters written
- * This program conforms to the betty documentation style
+ * Return: Number of characters written (always 1)
+ * This code conforms to the betty documentation style
  **/
 
-int _write(const char *str, int len)
+int _write_character(char c)
 {
-        return (write(1, str, len));
+	write(1, &c, 1);
+	return (1);
 }
