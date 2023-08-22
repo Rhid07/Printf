@@ -9,22 +9,36 @@
  **/
 int _printf(const char *format, ...)
 {
-	int count = 0;
 	va_list args;
+	int count = 0;
 
 	va_start(args, format);
 
 	while (*format)
 	{
 		if (*format != '%')
+		{
 			count += _write_character(*format);
+		}
 		else
 		{
 			format++;
 			if (*format == 'c')
-				count += _write_character(va_arg(args, int));
+			{
+				char c = va_arg(args, int);
+
+				count += _write_character(c);
+			}
 			else if (*format == 's')
-				count += _print_string(va_arg(args, char *));
+			{
+				char *str = va_arg(args, char *);
+
+				count += _print_string(str);
+			}
+			else if (*format == '%')
+			{
+				count += _write_character('%');
+			}
 			else
 			{
 				count += _write_character('%');
