@@ -16,8 +16,7 @@ int _print_binary(unsigned int num)
 
 	buffer[32] = '\0';
 
-	do
-{
+	do {
 	buffer[index--] = (num & 1) ? '1' : '0';
 	num >>= 1;
 }
