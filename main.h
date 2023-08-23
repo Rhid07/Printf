@@ -15,6 +15,9 @@ int _printf(const char *format, ...);
 int _write_character(char c);
 int print_int(int num);
 int _print_binary(unsigned int num);
+int print_unsigned_int(unsigned int num);
+int print_octal(unsigned int num);
+int print_hex(unsigned int num, int uppercase);
 int _print_specifier(const char *format, va_list arg_list);
 
 #endif
